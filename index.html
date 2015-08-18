@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>Prototypr</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
 </head>
 <body>
-  <div ng-view=""></div>
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#/">Prototypr</a></h1>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="row" ng-view=""></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.min.js"></script>
