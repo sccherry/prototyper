@@ -6,20 +6,47 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
 </head>
 <body>
-  <nav class="top-bar">
-    <ul class="title-area">
-      <li class="name">
-        <h1><a href="#/">Prototypr</a></h1>
-      </li>
-    </ul>
-  </nav>
+  <div class="fixed">
+    <header class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#/">Portfolio</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <nav class="top-bar-section">
+        <ul class="right">
+          <li ng-repeat="i in [1, 2, 3]"><a href="#">Link</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
 
   <div class="row" ng-view=""></div>
+
+  <footer>
+    <p class="left">Copyright info</p>
+
+    <ul class="inline-list right">
+      <li><a href="#" class="fi-mail"><span class="show-for-sr">Email</span></a></li>
+      <li><a href="#" class="fi-social-github"><span class="show-for-sr">Github</span></a></li>
+      <li><a href="#" class="fi-social-twitter"><span class="show-for-sr">Twitter</span></a></li>
+      <li><a href="#" class="fi-social-linkedin"><span class="show-for-sr">Linkedin</span></a></li>
+    </ul>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.min.js"></script>
   <script src="js/app.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.topbar.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation/foundation.equalizer.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
