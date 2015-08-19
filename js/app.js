@@ -1,3 +1,7 @@
+/**
+ * The Angular application, no need to modify.
+ */
+
 (function () {
   var app = angular.module('app', [
     'ngRoute'
