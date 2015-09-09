@@ -11,17 +11,17 @@
 <body>
   <div class="off-canvas-wrap" data-offcanvas>
     <div class="inner-wrap">
-      <nav class="tab-bar fixed">
-        <section class="left-small">
+      <div class="tab-bar">
+        <div class="left-small">
           <button class="left-off-canvas-toggle menu-icon"><span></span></button>
-        </section>
+        </div>
 
-        <section class="middle tab-bar-section">
+        <div class="middle tab-bar-section">
           <h1 class="title">Portfolio</h1>
-        </section>
-      </nav>
+        </div>
+      </div>
 
-      <aside class="left-off-canvas-menu">
+      <div class="left-off-canvas-menu">
         <ul class="off-canvas-list">
           <li><label>Projects</label></li>
           <li ng-repeat="i in [1, 2, 3]">
@@ -37,9 +37,9 @@
         </ul>
 
         <p>Copyright info</p>
-      </aside>
+      </div>
 
-      <section class="main-section" ng-view=""></section>
+      <div class="main-section" ng-view=""></div>
 
       <a class="exit-off-canvas"></a>
 
