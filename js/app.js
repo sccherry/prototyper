@@ -13,11 +13,11 @@
     function ($routeProvider) {
       $routeProvider
         .when('/:page', {
-          templateUrl: 'templates/page.html',
+          templateUrl: 'templates/include.html',
           controller: 'PageController'
         })
         .when('/', {
-          templateUrl: 'templates/index.html',
+          templateUrl: 'templates/include.html',
           controller: 'PageController'
         })
         .otherwise({
