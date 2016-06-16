@@ -1,43 +1,25 @@
 /**
- * The Angular application, no need to modify.
+ * The Prototyper application, no need to modify.
  */
 
-(function () {
-  var app = angular.module('app', [
-    'ngRoute'
-  ]);
+(function ($) {
+  var $view = $('#view');
 
-  app.config([
-    '$routeProvider',
+  function render(view) {
+    var template = window.location.hash.replace(/[#\/]+/,'') || 'index';
 
-    function ($routeProvider) {
-      $routeProvider
-        .when('/:page', {
-          templateUrl: 'templates/include.html',
-          controller: 'PageController'
-        })
-        .when('/', {
-          templateUrl: 'templates/include.html',
-          controller: 'PageController'
-        })
-        .otherwise({
-          redirectTo: '/'
-        });
-    }
-  ]);
+    $.ajax('templates/' + template + '.html').done(function(data) {
+      view.html(data);
 
+      // Signal template loaded
+      $(document).trigger('XHRContentLoaded');
+    });
+  }
 
-  // Controllers
+  // Initial page render
+  render($view);
 
-  app.controller('PageController', [
-    '$routeParams',
-    '$scope',
-
-    function ($routeParams, $scope) {
-      var page = $routeParams.page || 'index';
-
-      $scope.templateUrl = 'templates/' + page + '.html';
-    }
-  ]);
-
-})();
+  $(window).on('hashchange', function() {
+    render($view);
+  });
+})(jQuery);
